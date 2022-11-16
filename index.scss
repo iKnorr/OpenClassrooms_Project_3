@@ -1,0 +1,59 @@
+@import "restaurants.scss";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
+
+/* Global variables */
+$font-logo: "Shrikhand", cursive;
+$font-text: "Roboto", sans-serif;
+
+$primary-color: #9356dc;
+$secondary-color: #ff79da;
+$tertiary-color: #99e2d0;
+$black: black;
+$white: #ffffff;
+$dark-grey: #eaeaea;
+$light-grey: #f7f7f7;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: $font-logo;
+  font-size: 1.8rem;
+}
+
+p {
+  font-family: $font-text;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $white;
+  height: 4rem;
+  box-shadow: 0px 13px 14px -6px rgba(0, 0, 0, 0.95);
+  h1 {
+    margin-top: 0.5rem;
+  }
+
+  a {
+    color: $primary-color;
+    text-decoration: none;
+  }
+}
+
+.location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  background-color: $dark-grey;
+  // box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+  //   rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+
+  i {
+    margin-right: 0.8rem;
+  }
+}
