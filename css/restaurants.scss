@@ -1,0 +1,25 @@
+@import "variables";
+
+.right,
+.left {
+  flex: 1;
+}
+
+.left {
+  margin: 0.5rem 0 0 2rem;
+  font-size: 1.5rem;
+
+  i {
+    color: $black;
+  }
+}
+
+.right {
+  margin-right: 2rem;
+}
+
+img {
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+}

@@ -1,21 +1,14 @@
-@import "restaurants.scss";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
-
-/* Global variables */
-$font-logo: "Shrikhand", cursive;
-$font-text: "Roboto", sans-serif;
-
-$primary-color: #9356dc;
-$secondary-color: #ff79da;
-$tertiary-color: #99e2d0;
-$black: black;
-$white: #ffffff;
-$dark-grey: #eaeaea;
-$light-grey: #f7f7f7;
+@import "css/variables.scss";
+@import "css/restaurants.scss";
 
 * {
   margin: 0;
   padding: 0;
+}
+
+body {
+  font-family: $font-text;
 }
 
 h1 {
@@ -23,9 +16,18 @@ h1 {
   font-size: 1.8rem;
 }
 
-p {
-  font-family: $font-text;
+.main_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 100vh;
 }
+
+.footer {
+  margin-top: auto;
+}
+
+/* Section Navbar */
 
 .navbar {
   display: flex;
@@ -33,7 +35,6 @@ p {
   align-items: center;
   background-color: $white;
   height: 4rem;
-  box-shadow: 0px 13px 14px -6px rgba(0, 0, 0, 0.95);
   h1 {
     margin-top: 0.5rem;
   }
@@ -50,10 +51,203 @@ p {
   align-items: center;
   height: 3rem;
   background-color: $dark-grey;
-  // box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
-  //   rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  box-shadow: inset 0px 5px 5px -4px rgba(0, 0, 0, 0.3);
 
   i {
     margin-right: 0.8rem;
+  }
+}
+
+/* Section Banner */
+
+.banner {
+  background-color: $light-grey;
+  padding: 2rem;
+  text-align: center;
+
+  h2 {
+    margin: 0 1rem;
+    padding: 1rem;
+  }
+
+  p {
+    margin: 0 0 2rem 0;
+    font-size: 18px;
+    color: $text-grey;
+  }
+
+  button {
+    height: 3rem;
+    margin-bottom: 2rem;
+    padding: 0 1.3rem;
+    transition: 0.3s;
+    background-image: linear-gradient(
+      to bottom right,
+      $secondary-color,
+      $primary-color
+    );
+    border-radius: 1.5rem;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    color: $white;
+    font-size: 1rem;
+    font-weight: medium;
+  }
+
+  button:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    background-image: linear-gradient(
+      to bottom right,
+      $secondary-color-hover,
+      $primary-color-hover
+    );
+  }
+}
+
+/* Section Operation */
+
+.operation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 2rem 0;
+  padding: 1.6rem;
+  h2 {
+    margin: 0 0 1rem 0;
+  }
+}
+
+.number_operation {
+  position: absolute;
+  top: 25px;
+  left: -12px;
+  height: 0.8rem;
+  width: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #9356dc;
+  padding: 0.5rem;
+  border-radius: 50%;
+  color: $white;
+}
+
+.card_operation {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 5rem;
+  margin: 0.8rem 0;
+  background-color: $light-grey;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+
+  p {
+    font-weight: bold;
+    font-size: 1rem;
+  }
+
+  &:hover {
+    background-color: $primary-color-hover-card;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
+    .icon_operation {
+      color: $primary-color;
+    }
+  }
+}
+
+.icon_operation {
+  margin: 0 2rem 0 3rem;
+  color: $text-grey;
+  font-size: 1.5rem;
+}
+
+/* Section cards restaurants */
+
+.restaurants_cards {
+  background-color: $light-grey;
+  padding: 1.6rem;
+  a {
+    text-decoration: none;
+    color: $black;
+  }
+
+  h2 {
+    margin: 2rem 0 1.5rem 0;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 1rem;
+
+  img {
+    height: 10rem;
+    object-fit: cover;
+    object-position: bottom;
+    border-radius: 1rem 1rem 0 0;
+  }
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1rem 1rem;
+  font-size: 1.2rem;
+
+  p {
+    margin-top: 0.3rem;
+    font-weight: lighter;
+  }
+
+  i {
+    font-size: 1.6rem;
+    color: $dark-grey;
+    transition: 0.5s;
+  }
+
+  i:hover {
+    color: $primary-color;
+  }
+}
+
+/* Footer */
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: $footer-black;
+  padding: 1.5rem;
+
+  h3 {
+    margin-bottom: 0.7rem;
+    font-family: $font-logo;
+  }
+
+  a {
+    margin: 0.3rem 0;
+    color: $white;
+    text-decoration: none;
+  }
+}
+
+.footer_link_icon {
+  display: flex;
+  align-items: center;
+
+  span {
+    margin-left: 0.5rem;
+  }
+
+  .fa-handshake-angle {
+    font-size: 0.8rem;
   }
 }

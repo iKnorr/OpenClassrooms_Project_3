@@ -1,13 +1,14 @@
+<!DOCTYPE html>
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="index.css" />
-    <script
-      src="https://kit.fontawesome.com/d1a99bc0f9.js"
-      crossorigin="anonymous"
-    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
     <title>ohmyfood</title>
   </head>
   <body>
@@ -18,5 +19,61 @@
       <i class="fa-solid fa-location-dot"></i>
       <p>Paris, Belleville</p>
     </section>
+    <section class="banner">
+      <h2>Réservez le menu qui vous convient</h2>
+      <p>Découvrez des restaurant d'exception, sélectionnéz par nos soins.</p>
+      <button>Explorer nos restaurants</button>
+    </section>
+    <section class="operation">
+      <h2 class="heading_operation">Fonctionnement</h2>
+      <div class="card_operation">
+        <span class="number_operation">1</span>
+        <i class="icon_operation fa-solid fa-mobile-screen-button"></i>
+        <p>Choisissez un restaurant</p>
+      </div>
+      <div class="card_operation">
+        <span class="number_operation">2</span>
+        <i class="icon_operation fa-solid fa-list"></i>
+        <p>Composez votre menu</p>
+      </div>
+      <div class="card_operation">
+        <span class="number_operation">3</span>
+        <i class="icon_operation fa-solid fa-store"></i>
+        <p>Dégustez au restaurant</p>
+      </div>
+    </section>
+    <section class="restaurants_cards">
+      <h2>Restaurants</h2>
+      <a href="/la-palette-du-gout.html">
+        <div class="card">
+          <img
+            src="/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+            alt="Avatar"
+            style="width: 100%"
+          />
+          <div class="container">
+            <div class="container_content">
+              <h4>La palette du goût</h4>
+              <p>Ménilmontant</p>
+            </div>
+            <i id="full_heart" class="fa-solid fa-heart"></i>
+            <!-- <i id="heart" class="fa-regular fa-heart"></i> -->
+          </div>
+        </div>
+      </a>
+    </section>
+    <footer class="footer">
+      <a href="#"><h3>ohmyfood</h3></a>
+      <a href="#" class="footer_link_icon">
+        <i class="fa-solid fa-utensils"></i>
+        <span>Proposer un restaurant</span>
+      </a>
+      <a href="#" class="footer_link_icon">
+        <i class="fa-solid fa-handshake-angle"></i>
+        <span>Devenir partenaire</span>
+      </a>
+      <a href="#">Mentions légales</a>
+      <a href="#">Contact</a>
+    </footer>
   </body>
 </html>
