@@ -1,2 +1,6 @@
-@import "css/restaurants/restaurants.scss";
-@import "css/home/home.scss";
+@import "scss/utils/variables";
+@import "scss/ui/loader";
+@import "scss/utils/animations";
+@import "scss/home/home";
+@import "scss/restaurants/restaurants";
+@import "scss/ui/button";

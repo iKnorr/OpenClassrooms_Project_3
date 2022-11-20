@@ -1,4 +1,4 @@
-@import "../variables.scss";
+// @import "../variables.scss";
 
 /* Positioning of back flash in navbar */
 .right,
@@ -37,6 +37,8 @@ img {
   object-fit: cover;
 }
 
+/* Section Menu */
+
 .menu {
   padding: 1rem;
   background-color: $dark-grey;
@@ -50,10 +52,18 @@ img {
 /* Heading Menu */
 
 .menu_restaurant {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 2rem 0;
+}
+
+#heart_restaurant {
+  right: 20px;
+}
+#full_heart_restaurant {
+  right: 20px;
 }
 
 /* Heading Menu Type */
@@ -157,44 +167,45 @@ img {
   animation: turnCheck 0.7s;
 }
 
-@keyframes turnCheck {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 /* Animation for menu */
 
-.fade_in_1 {
+.fade_in {
   animation: fadeIn 1.2s ease-out forwards;
   opacity: 0;
   transform: translateY(200%);
 }
-
 .fade_in_2 {
-  animation: fadeIn 1.2s ease-out forwards;
   animation-delay: 200ms;
-  opacity: 0;
-  transform: translateY(200%);
 }
-
 .fade_in_3 {
-  animation: fadeIn 1.2s ease-out forwards;
   animation-delay: 400ms;
-  opacity: 0;
-  transform: translateY(20%);
+}
+.fade_in_4 {
+  animation-delay: 600ms;
+}
+.fade_in_5 {
+  animation-delay: 800ms;
+}
+.fade_in_6 {
+  animation-delay: 1000ms;
+}
+.fade_in_7 {
+  animation-delay: 1200ms;
+}
+.fade_in_8 {
+  animation-delay: 1400ms;
+}
+.fade_in_9 {
+  animation-delay: 1600ms;
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(20%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0%);
+/* Button Restaurant */
+
+#button_restaurant {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  button {
+    width: 50%;
   }
 }
