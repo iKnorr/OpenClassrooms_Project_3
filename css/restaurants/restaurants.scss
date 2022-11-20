@@ -1,0 +1,200 @@
+@import "../variables.scss";
+
+/* Positioning of back flash in navbar */
+.right,
+.left {
+  flex: 1;
+}
+
+.left {
+  margin: 0.5rem 0 0 2rem;
+  font-size: 1.5rem;
+
+  i {
+    color: $black;
+    transition: 0.2s;
+  }
+
+  i:hover {
+    color: $primary-color;
+    transform: scale(1.1);
+  }
+}
+
+.right {
+  margin-right: 2rem;
+}
+
+/* Image section */
+
+.img_restaurant {
+  height: 14rem;
+}
+
+img {
+  height: 18rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.menu {
+  padding: 1rem;
+  background-color: $dark-grey;
+  border-radius: 4rem 4rem 0 0;
+
+  ul {
+    list-style: none;
+  }
+}
+
+/* Heading Menu */
+
+.menu_restaurant {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+/* Heading Menu Type */
+
+.heading_menu_type {
+  position: relative;
+  margin-bottom: 2rem;
+  font-size: 16px;
+  font-weight: lighter;
+}
+
+.heading_menu_type::after {
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: 0px;
+  background-color: $tertiary-color;
+  height: 0.2rem;
+  width: 2.5rem;
+}
+
+/* Menu Type (Starters, Mains, Desserts */
+
+.menu_type {
+  margin-bottom: 3rem;
+}
+
+/* Cards Restaurant */
+
+.card_restaurant {
+  display: flex;
+  justify-content: space-between;
+  height: 5rem;
+  padding-left: 1rem;
+  background-color: $white;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.dish_name {
+  font-size: 1.3rem;
+  margin: 0 0 0.2rem 0;
+  font-weight: 500;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.dish_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 1rem 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.dish_side {
+  color: $text-grey;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.dish_price {
+  display: flex;
+  align-items: flex-end;
+  margin: 0 3rem 1rem auto;
+  font-weight: 500;
+}
+
+.dish_check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -1rem;
+  margin-right: -3rem;
+  padding: 1rem 1.4rem;
+  width: 0;
+  background-color: $tertiary-color;
+  border-radius: 0 1rem 1rem 0;
+  visibility: hidden;
+  transition: 0.7s;
+}
+
+.icon_check {
+  color: $white;
+  font-size: 1.6rem;
+}
+
+/* Animation Check Dish */
+
+.card_restaurant:hover .dish_check {
+  margin-right: 0;
+  width: 2rem;
+  visibility: visible;
+}
+
+.card_restaurant:hover .icon_check {
+  animation: turnCheck 0.7s;
+}
+
+@keyframes turnCheck {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Animation for menu */
+
+.fade_in_1 {
+  animation: fadeIn 1.2s ease-out forwards;
+  opacity: 0;
+  transform: translateY(200%);
+}
+
+.fade_in_2 {
+  animation: fadeIn 1.2s ease-out forwards;
+  animation-delay: 200ms;
+  opacity: 0;
+  transform: translateY(200%);
+}
+
+.fade_in_3 {
+  animation: fadeIn 1.2s ease-out forwards;
+  animation-delay: 400ms;
+  opacity: 0;
+  transform: translateY(20%);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
