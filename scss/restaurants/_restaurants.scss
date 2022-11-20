@@ -174,29 +174,38 @@ img {
   opacity: 0;
   transform: translateY(200%);
 }
-.fade_in_2 {
+.fade_in_1 {
   animation-delay: 200ms;
 }
-.fade_in_3 {
+.fade_in_2 {
   animation-delay: 400ms;
 }
-.fade_in_4 {
+.fade_in_3 {
   animation-delay: 600ms;
 }
-.fade_in_5 {
+.fade_in_4 {
   animation-delay: 800ms;
 }
-.fade_in_6 {
+.fade_in_5 {
   animation-delay: 1000ms;
 }
-.fade_in_7 {
+.fade_in_6 {
   animation-delay: 1200ms;
 }
-.fade_in_8 {
+.fade_in_7 {
   animation-delay: 1400ms;
 }
-.fade_in_9 {
+.fade_in_8 {
   animation-delay: 1600ms;
+}
+.fade_in_9 {
+  animation-delay: 1800ms;
+}
+.fade_in_10 {
+  animation-delay: 2000ms;
+}
+.fade_in_11 {
+  animation-delay: 2200ms;
 }
 
 /* Button Restaurant */

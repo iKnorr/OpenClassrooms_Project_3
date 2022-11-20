@@ -11,17 +11,64 @@
   align-items: center;
   height: 100vh;
   width: 100vw;
-  background-color: black;
-  animation: loader 4s ease;
+  background-image: linear-gradient(to bottom right, #9356dc, #278870);
+  animation: loader 4.5s ease;
   opacity: 0;
 }
 
+#spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  width: 4rem;
+  margin-bottom: 1rem;
+  border: solid 5px #99e2d0;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  animation: spinner 1.4s linear infinite;
+}
+
+#spinner_2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  width: 3rem;
+  border: solid 5px #9356dc;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spinner 0.7s reverse linear infinite;
+}
+
+#spinner_3 {
+  height: 2rem;
+  width: 2rem;
+  border: solid 5px #ff79da;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: spinner 0.7s linear infinite;
+}
+
+@keyframes second-spinner {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+#heading_spinner {
+  color: #ffffff;
+}
+
+/* Loader */
 @keyframes loader {
   0% {
     z-index: 100;
     opacity: 1;
   }
-  50% {
+  75% {
     opacity: 1;
   }
   100% {
@@ -29,16 +76,7 @@
     z-index: 0;
   }
 }
-#spinner {
-  height: 4rem;
-  width: 4rem;
-  margin-bottom: 1rem;
-  border: solid 10px #99e2d0;
-  border-bottom-color: #ff79da;
-  border-radius: 50%;
-  animation: spinner 1.4s linear infinite;
-}
-
+/* Spinner */
 @keyframes spinner {
   0% {
     transform: rotate(0deg);
@@ -47,11 +85,7 @@
     transform: rotate(360deg);
   }
 }
-#heading_spinner {
-  color: #ffffff;
-}
-
-/* Meni List Fade in Animation */
+/* Menu List Fade in Animation */
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -472,36 +506,48 @@ img {
   transform: translateY(200%);
 }
 
-.fade_in_2 {
+.fade_in_1 {
   animation-delay: 200ms;
 }
 
-.fade_in_3 {
+.fade_in_2 {
   animation-delay: 400ms;
 }
 
-.fade_in_4 {
+.fade_in_3 {
   animation-delay: 600ms;
 }
 
-.fade_in_5 {
+.fade_in_4 {
   animation-delay: 800ms;
 }
 
-.fade_in_6 {
+.fade_in_5 {
   animation-delay: 1000ms;
 }
 
-.fade_in_7 {
+.fade_in_6 {
   animation-delay: 1200ms;
 }
 
-.fade_in_8 {
+.fade_in_7 {
   animation-delay: 1400ms;
 }
 
-.fade_in_9 {
+.fade_in_8 {
   animation-delay: 1600ms;
+}
+
+.fade_in_9 {
+  animation-delay: 1800ms;
+}
+
+.fade_in_10 {
+  animation-delay: 2000ms;
+}
+
+.fade_in_11 {
+  animation-delay: 2200ms;
 }
 
 /* Button Restaurant */
@@ -515,6 +561,7 @@ img {
 }
 
 button {
+  cursor: pointer;
   height: 3rem;
   margin-bottom: 2rem;
   padding: 0 1.3rem;
