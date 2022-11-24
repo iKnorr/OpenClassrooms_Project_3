@@ -54,5 +54,10 @@
 }
 
 #heading_spinner {
+  font-size: 2.5rem;
+  font-family: $font-logo;
+  text-shadow: 0.1em 0.1em 0 $footer-black;
   color: $white;
+  animation: heading 1s ease-in;
+  opacity: 1;
 }

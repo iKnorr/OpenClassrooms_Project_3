@@ -3,6 +3,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -94,8 +95,8 @@ h1 {
   position: absolute;
   top: 25px;
   left: -12px;
-  height: 0.8rem;
-  width: 0.8rem;
+  height: 1.8rem;
+  width: 1.8rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -172,7 +173,7 @@ h1 {
 
   /* New Restaurant Icon */
 
-  #new_restaurant {
+  .new_restaurant_icon {
     position: absolute;
     top: 15px;
     right: 15px;
@@ -181,7 +182,7 @@ h1 {
     border-radius: 0.2rem;
   }
 
-  #new_restaurant_text {
+  .new_restaurant_text {
     color: $tertiary-dark-color;
     font-weight: 500;
   }
