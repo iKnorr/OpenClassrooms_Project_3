@@ -54,8 +54,8 @@
   font-size: 2.5rem;
   font-family: "Shrikhand", cursive;
   text-shadow: 0.1em 0.1em 0 #353535;
-  color: #ffffff;
-  animation: heading 1s ease-in;
+  color: #99e2d0;
+  animation: heading 1s ease-in-out;
   opacity: 1;
 }
 
@@ -75,10 +75,17 @@
 }
 @keyframes heading {
   0% {
+    color: #ffffff;
     opacity: 0;
     transform: scale(0);
   }
+  80% {
+    color: #ff79da;
+    transform: scale(1.4);
+    text-shadow: 0.3em 0.3em 0 #353535;
+  }
   100% {
+    color: #99e2d0;
     opacity: 1;
     transform: scale(1);
   }

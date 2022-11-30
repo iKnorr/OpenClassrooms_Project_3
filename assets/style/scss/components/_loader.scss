@@ -9,11 +9,6 @@
   align-items: center;
   height: 100vh;
   width: 100vw;
-  // background-image: linear-gradient(
-  //   to bottom right,
-  //   $primary-color,
-  //   $tertiary-dark-color
-  // );
   background-image: linear-gradient(to top, $primary-color, $footer-black);
   animation: loader 4.5s ease;
   opacity: 0;
@@ -57,7 +52,7 @@
   font-size: 2.5rem;
   font-family: $font-logo;
   text-shadow: 0.1em 0.1em 0 $footer-black;
-  color: $white;
-  animation: heading 1s ease-in;
+  color: $tertiary-color;
+  animation: heading 1s ease-in-out;
   opacity: 1;
 }
