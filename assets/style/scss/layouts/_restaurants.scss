@@ -217,3 +217,12 @@
     width: 50%;
   }
 }
+
+@media only screen and (min-width: 796px) {
+  .menu__wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 60%;
+  }
+}

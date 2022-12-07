@@ -12,7 +12,7 @@
   height: 100vh;
   width: 100vw;
   background-image: linear-gradient(to top, #9356dc, #353535);
-  animation: loader 0.1s ease;
+  animation: loader 4.5s ease;
   opacity: 0;
 }
 
@@ -129,6 +129,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  margin: 0 auto;
+  max-width: 1520px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -362,6 +368,31 @@ h1 {
   font-size: 0.8rem;
 }
 
+@media only screen and (min-width: 796px) {
+  .operation__cards {
+    display: flex;
+    justify-content: space-between;
+    grid-gap: 2rem;
+  }
+  .operation__cards .operation__card {
+    width: 100%;
+    padding-right: 1rem;
+  }
+  .restaurants__cards__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+  }
+}
+@media only screen and (min-width: 481px) {
+  .operation {
+    margin: 0;
+  }
+  .card__img {
+    height: 20rem;
+    object-position: unset;
+  }
+}
 /* Positioning of back flash in navbar */
 .nav__restaurant__right, .nav__restaurant__left {
   flex: 1;
@@ -567,6 +598,14 @@ h1 {
   width: 50%;
 }
 
+@media only screen and (min-width: 796px) {
+  .menu__wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 60%;
+  }
+}
 button {
   cursor: pointer;
   height: 3rem;
