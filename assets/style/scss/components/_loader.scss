@@ -10,7 +10,8 @@
   height: 100vh;
   width: 100vw;
   background-image: linear-gradient(to top, $primary-color, $footer-black);
-  animation: loader 4.5s ease;
+  // animation: loader 4.5s ease;
+  animation: loader 0.1s ease;
   opacity: 0;
 }
 
@@ -53,6 +54,6 @@
   font-family: $font-logo;
   text-shadow: 0.1em 0.1em 0 $footer-black;
   color: $tertiary-color;
-  animation: heading 1s ease-in-out;
+  animation: heading 4.5s infinite;
   opacity: 1;
 }

@@ -1,5 +1,3 @@
-// @import "../variables.scss";
-
 * {
   margin: 0;
   padding: 0;
@@ -35,11 +33,12 @@ h1 {
   align-items: center;
   background-color: $white;
   height: 4rem;
-  h1 {
+
+  &__logo {
     margin-top: 0.5rem;
   }
 
-  a {
+  &__link {
     color: $primary-color;
     text-decoration: none;
   }
@@ -65,12 +64,12 @@ h1 {
   padding: 2rem;
   text-align: center;
 
-  h2 {
+  &__heading {
     margin: 0 1rem;
     padding: 1rem;
   }
 
-  p {
+  &__text {
     margin: 0 0 2rem 0;
     font-size: 18px;
     color: $text-grey;
@@ -86,27 +85,12 @@ h1 {
   margin: 2rem 0;
   padding: 1.6rem;
 
-  h2 {
+  &__heading {
     margin: 0 0 1rem 0;
   }
 }
 
-.number_operation {
-  position: absolute;
-  top: 25px;
-  left: -12px;
-  height: 1.8rem;
-  width: 1.8rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #9356dc;
-  padding: 0.5rem;
-  border-radius: 50%;
-  color: $white;
-}
-
-.card_operation {
+.operation__card {
   position: relative;
   display: flex;
   justify-content: flex-start;
@@ -118,7 +102,7 @@ h1 {
   box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
   transition: 0.3s;
 
-  p {
+  &__text {
     font-weight: bold;
     font-size: 1rem;
   }
@@ -126,21 +110,36 @@ h1 {
   &:hover {
     background-color: $primary-color-hover-card;
     box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
-    .icon_operation {
+    .operation__card__icon {
       color: $primary-color;
     }
   }
-}
 
-.icon_operation {
-  margin: 0 2rem 0 3rem;
-  color: $text-grey;
-  font-size: 1.5rem;
+  &__number {
+    position: absolute;
+    top: 25px;
+    left: -12px;
+    height: 1.8rem;
+    width: 1.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #9356dc;
+    padding: 0.5rem;
+    border-radius: 50%;
+    color: $white;
+  }
+
+  &__icon {
+    margin: 0 2rem 0 3rem;
+    color: $text-grey;
+    font-size: 1.5rem;
+  }
 }
 
 /* Section cards restaurants */
 
-.restaurants_cards {
+.restaurants__cards {
   background-color: $light-grey;
   padding: 1.6rem;
   a {
@@ -148,7 +147,7 @@ h1 {
     color: $black;
   }
 
-  h2 {
+  &__heading {
     margin: 2rem 0 1.5rem 0;
   }
 }
@@ -164,8 +163,9 @@ h1 {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   }
 
-  img {
+  &__img {
     height: 10rem;
+    width: 100%;
     object-fit: cover;
     object-position: bottom;
     border-radius: 1rem 1rem 0 0;
@@ -173,7 +173,7 @@ h1 {
 
   /* New Restaurant Icon */
 
-  .new_restaurant_icon {
+  &__new__icon {
     position: absolute;
     top: 15px;
     right: 15px;
@@ -182,7 +182,7 @@ h1 {
     border-radius: 0.2rem;
   }
 
-  .new_restaurant_text {
+  &__new__text {
     color: $tertiary-dark-color;
     font-weight: 500;
   }
@@ -195,37 +195,40 @@ h1 {
   padding: 1rem 1rem;
   font-size: 1.2rem;
 
-  p {
+  &__text {
     margin-top: 0.3rem;
     font-weight: lighter;
   }
 }
 
 /* Heart hover and transition */
-.heart {
-  position: absolute;
-  right: 50px;
-  z-index: 5;
-  font-size: 1.6rem;
-  transition: 0.8s ease-out;
-  &:hover {
-    color: $primary-color;
-    // opacity: 0;
-  }
-  &:hover + .full_heart {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
 
-.full_heart {
-  position: absolute;
-  right: 50px;
+.heart {
   font-size: 1.6rem;
-  color: $primary-color;
-  transition: 0.8s ease-in-out;
-  transform: scale(0.1);
-  opacity: 0;
+
+  &__icon {
+    position: absolute;
+    right: 20px;
+    z-index: 5;
+    transition: 0.8s ease-out;
+    &:hover {
+      cursor: pointer;
+      color: $primary-color;
+    }
+    &:hover + .full_heart {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  .full_heart {
+    position: absolute;
+    right: 20px;
+    font-size: 1.6rem;
+    color: $primary-color;
+    transition: 0.8s ease-in-out;
+    transform: scale(0.1);
+    opacity: 0;
+  }
 }
 
 /* Footer */
@@ -236,27 +239,27 @@ h1 {
   background-color: $footer-black;
   padding: 1.5rem;
 
-  h3 {
+  &__heading {
     margin-bottom: 0.7rem;
     font-family: $font-logo;
   }
 
-  a {
+  &__link {
     margin: 0.3rem 0;
     color: $white;
     text-decoration: none;
   }
-}
 
-.footer_link_icon {
-  display: flex;
-  align-items: center;
+  &__icon {
+    display: flex;
+    align-items: center;
 
-  span {
-    margin-left: 0.5rem;
-  }
+    &__text {
+      margin-left: 0.4rem;
+    }
 
-  .fa-handshake-angle {
-    font-size: 0.8rem;
+    .fa-handshake-angle {
+      font-size: 0.8rem;
+    }
   }
 }

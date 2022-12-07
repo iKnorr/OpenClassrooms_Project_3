@@ -13,157 +13,158 @@
   </head>
   <body>
     <div class="main_wrapper">
-      <nav id="nav_restaurant" class="navbar">
-        <a href="../index.html" class="left"
-          ><i class="fa-solid fa-arrow-left"></i
+      <nav class="navbar nav__restaurant">
+        <a class="navbar__link nav__restaurant__left" href="../index.html"
+          ><i class="nav__restaurant__left__icon fa-solid fa-arrow-left"></i
         ></a>
-        <h1 class="heading_logo">ohmyfood</h1>
-        <div class="right"></div>
+        <h1 class="navbar__logo">ohmyfood</h1>
+        <!-- placeholder for positioning -->
+        <div class="nav__restaurant__right"></div>
       </nav>
-      <div class="img_restaurant">
+      <div class="restaurant__img">
         <img
+          class="restaurant__img__photo"
           src="../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
           alt="la_palette_du_gout"
         />
       </div>
       <section class="menu">
-        <div class="menu_restaurant">
+        <div class="menu__restaurant">
           <h1>La palette du goût</h1>
-          <i id="heart_restaurant" class="heart fa-regular fa-heart"></i>
-          <i
-            id="full_heart_restaurant"
-            class="full_heart fa-solid fa-heart"
-          ></i>
+          <div class="heart menu__restaurant__heart">
+            <i class="heart__icon fa-regular fa-heart"></i>
+            <i class="full_heart fa-solid fa-heart"></i>
+          </div>
         </div>
         <!-- Section Starters -->
-        <div class="menu_type">
-          <h3 class="fade_in heading_menu_type">ENTRÉES</h3>
+        <div class="menu__type">
+          <h3 class="fade_in menu__type__heading">ENTRÉES</h3>
           <ul>
             <li class="fade_in fade_in_1">
-              <div class="card card_restaurant">
-                <div class="dish_text">
-                  <h4 class="dish_name">Fricassée d'escargots</h4>
-                  <span class="dish_side">Au piment d'Espelette</span>
+              <div class="card card__restaurant">
+                <div class="dish">
+                  <h4 class="dish__name">Fricassée d'escargots</h4>
+                  <span class="dish__side">Au piment d'Espelette</span>
                 </div>
-                <span class="dish_price">25€</span>
-                <div class="dish_check">
-                  <i class="icon_check fa-solid fa-circle-check"></i>
+                <span class="dish__price">25€</span>
+                <div class="check">
+                  <i class="check__icon fa-solid fa-circle-check"></i>
                 </div>
               </div>
             </li>
             <li class="fade_in fade_in_2">
-              <div class="card card_restaurant">
-                <div class="dish_text">
-                  <h4 class="dish_name">Foie gras de canard mi-cuit</h4>
-                  <span class="dish_side">Et ses copeaux de truffe noire</span>
+              <div class="card card__restaurant">
+                <div class="dish">
+                  <h4 class="dish__name">Foie gras de canard mi-cuit</h4>
+                  <span class="dish__side">Et ses copeaux de truffe noire</span>
                 </div>
-                <span class="dish_price">35€</span>
-                <div class="dish_check">
-                  <i class="icon_check fa-solid fa-circle-check"></i>
+                <span class="dish__price">35€</span>
+                <div class="check">
+                  <i class="check__icon fa-solid fa-circle-check"></i>
                 </div>
               </div>
             </li>
             <li class="fade_in fade_in_3">
-              <div class="card card_restaurant">
-                <div class="dish_text">
-                  <h4 class="dish_name">Œeuf au plat</h4>
-                  <span class="dish_side"
+              <div class="card card__restaurant">
+                <div class="dish">
+                  <h4 class="dish__name">Œeuf au plat</h4>
+                  <span class="dish__side"
                     >Assaisonné à la truffe sur lit de caviar</span
                   >
                 </div>
-                <span class="dish_price">20€</span>
-                <div class="dish_check">
-                  <i class="icon_check fa-solid fa-circle-check"></i>
+                <span class="dish__price">20€</span>
+                <div class="check">
+                  <i class="check__icon fa-solid fa-circle-check"></i>
                 </div>
               </div>
             </li>
           </ul>
         </div>
         <!-- Main Dishes Section -->
-        <div class="menu_type">
-          <h3 class="fade_in fade_in_4 heading_menu_type">PLATS</h3>
+        <div class="menu__type">
+          <h3 class="fade_in fade_in_4 menu__type__heading">PLATS</h3>
           <ul>
             <li class="fade_in fade_in_5">
-              <div class="card card_restaurant">
-                <div class="dish_text">
-                  <h4 class="dish_name">Filet de bœuf aux herbes</h4>
-                  <span class="dish_side"
+              <div class="card card__restaurant">
+                <div class="dish">
+                  <h4 class="dish__name">Filet de bœuf aux herbes</h4>
+                  <span class="dish__side"
                     >Accompagné de sa ribambelle de légumes</span
                   >
                 </div>
-                <span class="dish_price">40€</span>
-                <div class="dish_check">
-                  <i class="icon_check fa-solid fa-circle-check"></i>
+                <span class="dish__price">40€</span>
+                <div class="check">
+                  <i class="check__icon fa-solid fa-circle-check"></i>
                 </div>
               </div>
             </li>
             <li class="fade_in fade_in_6">
-              <div class="card card_restaurant">
-                <div class="dish_text">
-                  <h4 class="dish_name">Parmentier de queue de bœuf</h4>
-                  <span class="dish_side"
+              <div class="card card__restaurant">
+                <div class="dish">
+                  <h4 class="dish__name">Parmentier de queue de bœuf</h4>
+                  <span class="dish__side"
                     >À la truffe noire sur sa purée de panais</span
                   >
                 </div>
-                <span class="dish_price">35€</span>
-                <div class="dish_check">
-                  <i class="icon_check fa-solid fa-circle-check"></i>
+                <span class="dish__price">35€</span>
+                <div class="check">
+                  <i class="check__icon fa-solid fa-circle-check"></i>
                 </div>
               </div>
             </li>
             <li class="fade_in fade_in_7">
-              <div class="card card_restaurant">
-                <div class="dish_text">
-                  <h4 class="dish_name">Filet de turbot</h4>
-                  <span class="dish_side">Aux agrumes</span>
+              <div class="card card__restaurant">
+                <div class="dish">
+                  <h4 class="dish__name">Filet de turbot</h4>
+                  <span class="dish__side">Aux agrumes</span>
                 </div>
-                <span class="dish_price">44€</span>
-                <div class="dish_check">
-                  <i class="icon_check fa-solid fa-circle-check"></i>
+                <span class="dish__price">44€</span>
+                <div class="check">
+                  <i class="check__icon fa-solid fa-circle-check"></i>
                 </div>
               </div>
             </li>
           </ul>
         </div>
         <!-- Desert Section -->
-        <div class="menu_type">
-          <h3 class="fade_in fade_in_8 heading_menu_type">DESSERTS</h3>
+        <div class="menu__type">
+          <h3 class="fade_in fade_in_8 menu__type__heading">DESSERTS</h3>
           <ul>
             <li class="fade_in fade_in_9">
-              <div class="card card_restaurant">
-                <div class="dish_text">
-                  <h4 class="dish_name">Paris-Brest</h4>
-                  <span class="dish_side">Revisité</span>
+              <div class="card card__restaurant">
+                <div class="dish">
+                  <h4 class="dish__name">Paris-Brest</h4>
+                  <span class="dish__side">Revisité</span>
                 </div>
-                <span class="dish_price">18€</span>
-                <div class="dish_check">
-                  <i class="icon_check fa-solid fa-circle-check"></i>
+                <span class="dish__price">18€</span>
+                <div class="check">
+                  <i class="check__icon fa-solid fa-circle-check"></i>
                 </div>
               </div>
             </li>
             <li class="fade_in fade_in_10">
-              <div class="card card_restaurant">
-                <div class="dish_text">
-                  <h4 class="dish_name">Macaron au chocolat d'exception</h4>
-                  <span class="dish_side"
+              <div class="card card__restaurant">
+                <div class="dish">
+                  <h4 class="dish__name">Macaron au chocolat d'exception</h4>
+                  <span class="dish__side"
                     >Et glace à la vanille de Madagascar</span
                   >
                 </div>
-                <span class="dish_price">22€</span>
-                <div class="dish_check">
-                  <i class="icon_check fa-solid fa-circle-check"></i>
+                <span class="dish__price">22€</span>
+                <div class="check">
+                  <i class="check__icon fa-solid fa-circle-check"></i>
                 </div>
               </div>
             </li>
             <li class="fade_in fade_in_11">
-              <div class="card card_restaurant">
-                <div class="dish_text">
-                  <h4 class="dish_name">Mousse au chocolat</h4>
-                  <span class="dish_side">Pour 2 personnes</span>
+              <div class="card card__restaurant">
+                <div class="dish">
+                  <h4 class="dish__name">Mousse au chocolat</h4>
+                  <span class="dish__side">Pour 2 personnes</span>
                 </div>
-                <span class="dish_price">23€</span>
-                <div class="dish_check">
-                  <i class="icon_check fa-solid fa-circle-check"></i>
+                <span class="dish__price">23€</span>
+                <div class="check">
+                  <i class="check__icon fa-solid fa-circle-check"></i>
                 </div>
               </div>
             </li>
@@ -175,17 +176,19 @@
       </section>
       <!-- Footer -->
       <footer class="footer">
-        <a href="../index.html"><h3>ohmyfood</h3></a>
-        <a href="#" class="footer_link_icon">
+        <a class="footer__link" href="../index.html"
+          ><h3 class="footer__heading">ohmyfood</h3></a
+        >
+        <a class="footer__link" href="#" class="footer__icon">
           <i class="fa-solid fa-utensils"></i>
-          <span>Proposer un restaurant</span>
+          <span class="footer__icon__text">Proposer un restaurant</span>
         </a>
-        <a href="#" class="footer_link_icon">
+        <a class="footer__link" href="#" class="footer__icon">
           <i class="fa-solid fa-handshake-angle"></i>
           <span>Devenir partenaire</span>
         </a>
-        <a href="#">Mentions légales</a>
-        <a href="mailto:ohmyfood@omg.com">Contact</a>
+        <a class="footer__link" href="#">Mentions légales</a>
+        <a class="footer__link" href="mailto:ohmyfood@omg.com">Contact</a>
       </footer>
     </div>
   </body>

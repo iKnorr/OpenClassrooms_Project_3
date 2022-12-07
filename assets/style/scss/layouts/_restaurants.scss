@@ -1,40 +1,42 @@
 // @import "../variables.scss";
 
 /* Positioning of back flash in navbar */
-.right,
-.left {
-  flex: 1;
-}
-
-.left {
-  margin: 0.5rem 0 0 2rem;
-  font-size: 1.5rem;
-
-  i {
-    color: $black;
-    transition: 0.2s;
+.nav__restaurant {
+  &__right,
+  &__left {
+    flex: 1;
   }
 
-  i:hover {
-    color: $primary-color;
-    transform: scale(1.1);
-  }
-}
+  &__left {
+    margin: 0.5rem 0 0 2rem;
+    font-size: 1.5rem;
 
-.right {
-  margin-right: 2rem;
+    &__icon {
+      color: $black;
+      transition: 0.2s;
+    }
+
+    &__icon:hover {
+      color: $primary-color;
+      transform: scale(1.1);
+    }
+  }
+
+  &__right {
+    margin-right: 2rem;
+  }
 }
 
 /* Image section */
 
-.img_restaurant {
+.restaurant__img {
   height: 14rem;
-}
 
-img {
-  height: 18rem;
-  width: 100%;
-  object-fit: cover;
+  &__photo {
+    height: 18rem;
+    width: 100%;
+    object-fit: cover;
+  }
 }
 
 /* Section Menu */
@@ -51,7 +53,7 @@ img {
 
 /* Heading Menu */
 
-.menu_restaurant {
+.menu__restaurant {
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -59,41 +61,39 @@ img {
   margin: 2rem 0;
 }
 
-#heart_restaurant {
-  right: 20px;
-}
-#full_heart_restaurant {
-  right: 20px;
-}
-
-/* Heading Menu Type */
-
-.heading_menu_type {
-  position: relative;
-  margin-bottom: 2rem;
-  font-size: 16px;
-  font-weight: lighter;
-}
-
-.heading_menu_type::after {
-  content: "";
+.menu__restaurant__heart {
   position: absolute;
-  top: 25px;
-  left: 0px;
-  background-color: $tertiary-color;
-  height: 0.2rem;
-  width: 2.5rem;
+  top: 5px;
+  right: -5px;
+}
+
+.menu__type {
+  margin-bottom: 3rem;
+  /* Heading Menu Type */
+
+  &__heading {
+    position: relative;
+    margin-bottom: 2rem;
+    font-size: 16px;
+    font-weight: lighter;
+  }
+
+  &__heading::after {
+    content: "";
+    position: absolute;
+    top: 25px;
+    left: 0px;
+    background-color: $tertiary-color;
+    height: 0.2rem;
+    width: 2.5rem;
+  }
 }
 
 /* Menu Type (Starters, Mains, Desserts */
 
-.menu_type {
-  margin-bottom: 3rem;
-}
-
 /* Cards Restaurant */
 
-.card_restaurant {
+.card__restaurant {
   display: flex;
   justify-content: space-between;
   height: 5rem;
@@ -101,18 +101,20 @@ img {
   background-color: $white;
   overflow: hidden;
   cursor: pointer;
+
+  /* Animation Check Dish */
+  &:hover .check {
+    margin-right: 0;
+    width: 4rem;
+    visibility: visible;
+  }
+
+  &:hover .check__icon {
+    animation: turnCheck 0.5s ease;
+  }
 }
 
-.dish_name {
-  font-size: 1.3rem;
-  margin: 0 0 0.2rem 0;
-  font-weight: 500;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-
-.dish_text {
+.dish {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -120,23 +122,32 @@ img {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+
+  &__name {
+    font-size: 1.3rem;
+    margin: 0 0 0.2rem 0;
+    font-weight: 500;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  &__side {
+    color: $text-grey;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  &__price {
+    display: flex;
+    align-items: flex-end;
+    margin: 0 3rem 1rem auto;
+    font-weight: 500;
+  }
 }
 
-.dish_side {
-  color: $text-grey;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-
-.dish_price {
-  display: flex;
-  align-items: flex-end;
-  margin: 0 3rem 1rem auto;
-  font-weight: 500;
-}
-
-.dish_check {
+.check {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -147,24 +158,12 @@ img {
   background-color: $tertiary-color;
   border-radius: 0 1rem 1rem 0;
   visibility: hidden;
-  transition: 0.7s;
-}
+  transition: 0.5s;
 
-.icon_check {
-  color: $white;
-  font-size: 1.6rem;
-}
-
-/* Animation Check Dish */
-
-.card_restaurant:hover .dish_check {
-  margin-right: 0;
-  width: 4rem;
-  visibility: visible;
-}
-
-.card_restaurant:hover .icon_check {
-  animation: turnCheck 0.7s;
+  &__icon {
+    color: $white;
+    font-size: 1.6rem;
+  }
 }
 
 /* Animation for menu */

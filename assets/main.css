@@ -12,7 +12,7 @@
   height: 100vh;
   width: 100vw;
   background-image: linear-gradient(to top, #9356dc, #353535);
-  animation: loader 4.5s ease;
+  animation: loader 0.1s ease;
   opacity: 0;
 }
 
@@ -55,7 +55,7 @@
   font-family: "Shrikhand", cursive;
   text-shadow: 0.1em 0.1em 0 #353535;
   color: #99e2d0;
-  animation: heading 1s ease-in-out;
+  animation: heading 4.5s infinite;
   opacity: 1;
 }
 
@@ -77,17 +77,23 @@
   0% {
     color: #ffffff;
     opacity: 0;
-    transform: scale(0);
+    transform: scale(0.1);
   }
-  80% {
-    color: #ff79da;
+  30% {
+    color: #99e2d0;
     transform: scale(1.4);
     text-shadow: 0.3em 0.3em 0 #353535;
   }
-  100% {
-    color: #99e2d0;
-    opacity: 1;
+  60% {
+    color: #9356dc;
     transform: scale(1);
+    text-shadow: 0.1em 0.1em 0 #353535;
+  }
+  100% {
+    color: #ff79da;
+    opacity: 1;
+    transform: scale(1.3);
+    text-shadow: 0.3em 0.3em 0 #353535;
   }
 }
 /* Spinner */
@@ -154,10 +160,10 @@ h1 {
   background-color: #ffffff;
   height: 4rem;
 }
-.navbar h1 {
+.navbar__logo {
   margin-top: 0.5rem;
 }
-.navbar a {
+.navbar__link {
   color: #9356dc;
   text-decoration: none;
 }
@@ -180,11 +186,11 @@ h1 {
   padding: 2rem;
   text-align: center;
 }
-.banner h2 {
+.banner__heading {
   margin: 0 1rem;
   padding: 1rem;
 }
-.banner p {
+.banner__text {
   margin: 0 0 2rem 0;
   font-size: 18px;
   color: #737373;
@@ -198,11 +204,34 @@ h1 {
   margin: 2rem 0;
   padding: 1.6rem;
 }
-.operation h2 {
+.operation__heading {
   margin: 0 0 1rem 0;
 }
 
-.number_operation {
+.operation__card {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 5rem;
+  margin: 0.8rem 0;
+  background-color: #f7f7f7;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+.operation__card__text {
+  font-weight: bold;
+  font-size: 1rem;
+}
+.operation__card:hover {
+  background-color: rgba(147, 86, 220, 0.1882352941);
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
+}
+.operation__card:hover .operation__card__icon {
+  color: #9356dc;
+}
+.operation__card__number {
   position: absolute;
   top: 25px;
   left: -12px;
@@ -216,47 +245,22 @@ h1 {
   border-radius: 50%;
   color: #ffffff;
 }
-
-.card_operation {
-  position: relative;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  height: 5rem;
-  margin: 0.8rem 0;
-  background-color: #f7f7f7;
-  border-radius: 1.5rem;
-  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
-}
-.card_operation p {
-  font-weight: bold;
-  font-size: 1rem;
-}
-.card_operation:hover {
-  background-color: rgba(147, 86, 220, 0.1882352941);
-  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
-}
-.card_operation:hover .icon_operation {
-  color: #9356dc;
-}
-
-.icon_operation {
+.operation__card__icon {
   margin: 0 2rem 0 3rem;
   color: #737373;
   font-size: 1.5rem;
 }
 
 /* Section cards restaurants */
-.restaurants_cards {
+.restaurants__cards {
   background-color: #f7f7f7;
   padding: 1.6rem;
 }
-.restaurants_cards a {
+.restaurants__cards a {
   text-decoration: none;
   color: black;
 }
-.restaurants_cards h2 {
+.restaurants__cards__heading {
   margin: 2rem 0 1.5rem 0;
 }
 
@@ -271,13 +275,14 @@ h1 {
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
-.card img {
+.card__img {
   height: 10rem;
+  width: 100%;
   object-fit: cover;
   object-position: bottom;
   border-radius: 1rem 1rem 0 0;
 }
-.card .new_restaurant_icon {
+.card__new__icon {
   position: absolute;
   top: 15px;
   right: 15px;
@@ -285,7 +290,7 @@ h1 {
   background-color: #99e2d0;
   border-radius: 0.2rem;
 }
-.card .new_restaurant_text {
+.card__new__text {
   color: #278870;
   font-weight: 500;
 }
@@ -297,30 +302,32 @@ h1 {
   padding: 1rem 1rem;
   font-size: 1.2rem;
 }
-.container p {
+.container__text {
   margin-top: 0.3rem;
   font-weight: lighter;
 }
 
 /* Heart hover and transition */
 .heart {
-  position: absolute;
-  right: 50px;
-  z-index: 5;
   font-size: 1.6rem;
+}
+.heart__icon {
+  position: absolute;
+  right: 20px;
+  z-index: 5;
   transition: 0.8s ease-out;
 }
-.heart:hover {
+.heart__icon:hover {
+  cursor: pointer;
   color: #9356dc;
 }
-.heart:hover + .full_heart {
+.heart__icon:hover + .full_heart {
   opacity: 1;
   transform: scale(1);
 }
-
-.full_heart {
+.heart .full_heart {
   position: absolute;
-  right: 50px;
+  right: 20px;
   font-size: 1.6rem;
   color: #9356dc;
   transition: 0.8s ease-in-out;
@@ -335,56 +342,51 @@ h1 {
   background-color: #353535;
   padding: 1.5rem;
 }
-.footer h3 {
+.footer__heading {
   margin-bottom: 0.7rem;
   font-family: "Shrikhand", cursive;
 }
-.footer a {
+.footer__link {
   margin: 0.3rem 0;
   color: #ffffff;
   text-decoration: none;
 }
-
-.footer_link_icon {
+.footer__icon {
   display: flex;
   align-items: center;
 }
-.footer_link_icon span {
-  margin-left: 0.5rem;
+.footer__icon__text {
+  margin-left: 0.4rem;
 }
-.footer_link_icon .fa-handshake-angle {
+.footer__icon .fa-handshake-angle {
   font-size: 0.8rem;
 }
 
 /* Positioning of back flash in navbar */
-.right,
-.left {
+.nav__restaurant__right, .nav__restaurant__left {
   flex: 1;
 }
-
-.left {
+.nav__restaurant__left {
   margin: 0.5rem 0 0 2rem;
   font-size: 1.5rem;
 }
-.left i {
+.nav__restaurant__left__icon {
   color: black;
   transition: 0.2s;
 }
-.left i:hover {
+.nav__restaurant__left__icon:hover {
   color: #9356dc;
   transform: scale(1.1);
 }
-
-.right {
+.nav__restaurant__right {
   margin-right: 2rem;
 }
 
 /* Image section */
-.img_restaurant {
+.restaurant__img {
   height: 14rem;
 }
-
-img {
+.restaurant__img__photo {
   height: 18rem;
   width: 100%;
   object-fit: cover;
@@ -401,7 +403,7 @@ img {
 }
 
 /* Heading Menu */
-.menu_restaurant {
+.menu__restaurant {
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -409,23 +411,23 @@ img {
   margin: 2rem 0;
 }
 
-#heart_restaurant {
-  right: 20px;
+.menu__restaurant__heart {
+  position: absolute;
+  top: 5px;
+  right: -5px;
 }
 
-#full_heart_restaurant {
-  right: 20px;
+.menu__type {
+  margin-bottom: 3rem;
+  /* Heading Menu Type */
 }
-
-/* Heading Menu Type */
-.heading_menu_type {
+.menu__type__heading {
   position: relative;
   margin-bottom: 2rem;
   font-size: 16px;
   font-weight: lighter;
 }
-
-.heading_menu_type::after {
+.menu__type__heading::after {
   content: "";
   position: absolute;
   top: 25px;
@@ -436,12 +438,8 @@ img {
 }
 
 /* Menu Type (Starters, Mains, Desserts */
-.menu_type {
-  margin-bottom: 3rem;
-}
-
 /* Cards Restaurant */
-.card_restaurant {
+.card__restaurant {
   display: flex;
   justify-content: space-between;
   height: 5rem;
@@ -449,18 +447,18 @@ img {
   background-color: #ffffff;
   overflow: hidden;
   cursor: pointer;
+  /* Animation Check Dish */
+}
+.card__restaurant:hover .check {
+  margin-right: 0;
+  width: 4rem;
+  visibility: visible;
+}
+.card__restaurant:hover .check__icon {
+  animation: turnCheck 0.5s ease;
 }
 
-.dish_name {
-  font-size: 1.3rem;
-  margin: 0 0 0.2rem 0;
-  font-weight: 500;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-
-.dish_text {
+.dish {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -469,22 +467,28 @@ img {
   text-overflow: ellipsis;
   overflow: hidden;
 }
-
-.dish_side {
+.dish__name {
+  font-size: 1.3rem;
+  margin: 0 0 0.2rem 0;
+  font-weight: 500;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.dish__side {
   color: #737373;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-
-.dish_price {
+.dish__price {
   display: flex;
   align-items: flex-end;
   margin: 0 3rem 1rem auto;
   font-weight: 500;
 }
 
-.dish_check {
+.check {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -495,23 +499,11 @@ img {
   background-color: #99e2d0;
   border-radius: 0 1rem 1rem 0;
   visibility: hidden;
-  transition: 0.7s;
+  transition: 0.5s;
 }
-
-.icon_check {
+.check__icon {
   color: #ffffff;
   font-size: 1.6rem;
-}
-
-/* Animation Check Dish */
-.card_restaurant:hover .dish_check {
-  margin-right: 0;
-  width: 4rem;
-  visibility: visible;
-}
-
-.card_restaurant:hover .icon_check {
-  animation: turnCheck 0.7s;
 }
 
 /* Animation for menu */
