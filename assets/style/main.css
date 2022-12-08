@@ -588,6 +588,10 @@ h1 {
   animation-delay: 2200ms;
 }
 
+.fade_in_12 {
+  animation-delay: 2400ms;
+}
+
 /* Button Restaurant */
 #button_restaurant {
   display: flex;
